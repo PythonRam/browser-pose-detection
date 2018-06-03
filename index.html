@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pose Detection by pythonRam</title>
+
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/posenet"></script>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="dmvendor.css">
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #main {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        #video {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            -webkit-filter: blur(50px);
+            -moz-filter: blur(50px);
+            -o-filter: blur(50px);
+            -ms-filter: blur(50px);
+            filter: blur(50px);
+        }
+
+        #output {
+            margin-top: 20vh;
+            margin-bottom: 20vh;
+            margin-left: 20vw;
+            margin-right: 20vw;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="loading">Loading .....</p>
+    <video id="video"></video>
+    <div id="main">
+        <div>
+            <canvas id="output"></canvas>
+        </div>
+    </div>
+    <p id="info"></p>
+    <script src="app.js">
+    </script>
+</body>
+
+</html>
